@@ -85,6 +85,7 @@ class Effect {
     curveSlider.addEventListener("change", (e) => {
       this.curve = Number(e.target.value);
       curveLabel.innerText = `Curve    ${this.curve}`;
+      this.init();
     });
 
     window.addEventListener("resize", (e) => {
@@ -154,5 +155,3 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
-
-
